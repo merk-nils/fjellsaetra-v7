@@ -43,10 +43,13 @@ input[type=search], select { width:100%; padding:8px 10px; border:1px solid var(
 .popup a { color:#c23a2a; }
 .v7etikett { background:var(--rod); color:#fff; border:none; font-weight:600; padding:1px 6px; }
 .v7etikett::before { display:none; }
+/* På mobil ruller hele siden: kartet øverst, så søk, liste og forklaring under */
 @media (max-width:800px) {
-  main { flex-direction:column; }
-  #kart { flex:none; height:55vh; }
-  aside { width:100%; border-left:none; border-top:1px solid var(--linje); flex:1; }
+  html, body { height:auto; }
+  main { display:block; }
+  #kart { height:60vh; }
+  aside { width:100%; border-left:none; border-top:1px solid var(--linje); }
+  #liste { overflow:visible; }
 }
 </style>
 </head>
